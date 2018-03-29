@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import BusinessList from '../BusinessList/BusinessList';
 import SearchBar from '../SearchBar/SearchBar';
-import Yelp from './util/Yelp';
+// import Yelp from './util/Yelp';
 
 export let business = {
     imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
