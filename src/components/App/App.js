@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import BusinessList from '../BusinessList/BusinessList';
 import SearchBar from '../SearchBar/SearchBar';
+import Yelp from './util/Yelp';
 
 export let business = {
     imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
@@ -28,13 +29,13 @@ const businesses = [
 export class App extends Component {
   searchYelp(term, location, sortBy) {
       console.log('Searching Yelp with ' + term + ',' + location + ',' + sortBy);
-  }
+  };
 
   render() {
     return (
         <div className="App">
             <h1>ravenous</h1>
-            <SearchBar />
+            <SearchBar searchYelp={this.searchYelp}/>
             <BusinessList businesses={businesses}/>
         </div>
     );
